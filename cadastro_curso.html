@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+    <form>
+       <input type="hidden" id="curso_id">
+       <fieldset>
+           <legend>Cadastro de curso</legend>
+            <label for="nome">Nome:</br><input id="nome" name="nome" type="text"></label></br>
+            <label for="descricao">Descrição:</br><input id="descricao" name="descricao" type="text"></label></br>
+            <label for="duracao">Duração:</br><input id="duracao" name="duracao" type="text"></label></br>
+            <label for="status">Status:</br>
+                <select id="status" name="status">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="nao_iniciado">Não iniciado</option>
+                    <option value="em_andamento">Em andaento</option>
+                    <option value="concluido">Concluído</option>
+                </select>
+            </label></br>
+            <label for="data_criacao">Data de criação:</br><input id="data_criacao" name="data_criacao" type="date"></label></br>
+        </fieldset> 
+        <button type="button" id="botao_salvar" class="bot_salv">Salvar</button>
+        <script src="./controller/curso.js"></script>
+   </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+    <form action="" method="GET" method="POST">
+       <fieldset>
+           <button id="cazul"><a href="cadastro_turma.html" id="cadas-turma" title="turma" target="iframe-conteudo">Nova Turma</a></button>
+           <legend>Pesquisa</legend>
+           <label for="filtroNomes">Turma:</br><input id="filtroTurma" name="filtroTurma" type="text"></label></br>
+       </fieldset>
+    <button id="procurar" type="button" >Procurar</button>
+       <fieldset>
+            <legend>Registros</legend>
+            <div id="resultado" style="margin-top: 20px;"></div>
+       </fieldset>
+   </form> 
+   <script src="./controller/turma.js"></script>
+</body>
+</html>

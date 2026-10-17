@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DProfessor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+    <form>
+        <input type="hidden" id="professor_id">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome:</br><input id="nome" name="nome" type="text"></label></br>
+            <label for ="sexo">Sexo:</br><input id="sexo" name="sexo" type="text" maxlength="1"></label></br>
+            <label for="cpf">CPF:</br><input id="cpf" name="cpf" placeholder="999.999.999.99" type="number" maxlength="11"></label></br>
+            <label for="nascimento">Data de nascimento:</br><input id="nascimento" name="nascimento" type= "date"></label></br>
+            <label for="status">Status:</br>
+                <select id="status" name="status">
+                      <option value =""disabled selected>Selecione</option>
+                      <option value ="ativo">Ativo</option>
+                      <option value ="inativo">Inativo</option>
+                      <option value ="de liceça">De liceça</option>
+                </select>
+            </label></br>
+            <label for="formacao">Formação:</br>
+                <select id="formacao" name="formacao">
+                      <option value ="" disabled selected>Selecione</option>
+                      <option value ="G">Graduação</option>
+                      <option value ="M">Mestrado</option>
+                      <option value ="L">Licenciatura</option>
+                      <option value ="P">Pós-Graduação</option>
+                      <option value ="D">Doutorado</option>
+                </select>
+            </label></br>
+            <label for="emissao">Data de emissão:</br><input id="emissao" name="emissao" type= "date"></label></br>
+            <label for="observacao">Observações:</br><input id="observacao" name="observacao" type= "text"></label></br>
+        </fieldset>
+        <fieldset>
+            <legend>Contato</legend>
+            <label for="email">Email</br><input id="email" name="email" type="email"></label></br>
+            <label for="telefone">Telefone</br><input id="telefone" name="telefone" type="tel"></label></br>            
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="cep">CEP</br><input id="cep" name="cep" type="number" placeholder="99999-999"></label></br> 
+            <label for="rua">Rua</br><input id="rua" name="rua" type="text"></label></br> 
+            <label for="numero">Número</br><input id="numero" name="numero" type="number"></label></br> 
+            <label for="complemento">Complemento</br><input id="complemento" name="-complemento" type="text"></label></br> 
+            <label for="bairro">Bairro</br><input id="bairro" name="bairro" type="text"></label></br> 
+            <label for="cidade">Cidade</br><input id="cidade" name="cidade" type="text"></label></br> 
+            <label for="estado">Estado</br><input id="estado" name="estado" type="text"></label></br> 
+           
+        </fieldset>
+        <button type="button" id="botao_salvar" class="bot_salv">Salvar</button>
+    </form>
+    <script src="./controller/professor.js"></script>
+</body>
+</html>

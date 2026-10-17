@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>E.E.B Victor Feliphe Fossile</h1>
+        <img src="escola.png" alt="logotipo">
+        <button type="button" id="perfil"><img src="gatps.jpeg"></button>
+    </header>
+    <div class="barra-lateral">
+        <main class="barra-lateral-principal">
+            <aside class="barra-lateral-navegacao">
+                <nav>
+                    <h2>Menu</h2>
+                    <ul class="lista-navegacao">
+                        <li><a href="inicio.html" id="1" title="inicio" target="iframe-conteudo">Inicio</a></li>
+                        <li><a href="consulta_prof.html" id="2" title="professor" target="iframe-conteudo">Professor</a></li>
+                        <li><a href="consulta_disciplina.html" id="3" title="disciplina" target="iframe-conteudo">Disciplina</a></li>
+                        <li><a href="consulta_aluno.html" id="4" title="aluno" target="iframe-conteudo">Aluno</a></li>
+                        <li><a href="consulta_turma.html" id="5" title="turma" target="iframe-conteudo">Turma</a></li>
+                        <li><a href="consulta_curso.html" id="6" title="matricula" target="iframe-conteudo">Curso</a></li>
+                        <li><a href="consulta_usuario.html" id="7" title="consulta usus" target="iframe-conteudo">Usuário</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="conteudo">
+                <iframe id="iframe-conteudo" name="iframe-conteudo" src="inicio.html"></iframe>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>2025 Victor Feliphe Fossile</p>
+    </footer>
+    <script src="./controller/perfil.js"></script>
+    
+</body>
+</html>

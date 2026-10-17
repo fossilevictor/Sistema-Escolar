@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="form_styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <form>
+        <input type="hidden" id="usuario_id">
+        <fieldset>
+            <legend>Cadastro de usuário</legend>
+            <label for="nome">Nome:</br><input id="nome" name="nome" type="text"></label></br>
+            <label for="email">Email</br><input id="email" name="email" type="email"></label></br>
+            <label for="senha">Senha</br><input id="senha" name="senha" type="password"> 
+                <span class="olin" onclick="mostarSenha()">
+                  <i id="fih" class="fa-solid fa-eye"></i>
+                </span>
+            </label></br>
+            <label for="data_nascimento">Data de Nascimento</br><input id="data_nascimento" name="data_nascimento" type="date"></label></br>
+            <label for ="sexo">Sexo:</br>
+            <select name="sexo" id="sexo">
+                <option value="M">Masc</option>
+                <option value="F">Fem</option>
+            </select> 
+            </label></br>
+            <label for="perfil">Perfil:</br>
+                <select id="perfil" name="perfil">
+                      <option value =""disabled selected>Selecione</option>
+                      <option value ="ADMIN">ADMIN</option>
+                      <option value ="USER">USER</option>
+                </select>
+            </label></br>
+            <label for="status">Status:</br>
+                <select id="status" name="status">
+                      <option value =""disabled selected>Selecione</option>
+                      <option value ="1">Ativo</option>
+                      <option value ="0">Inativo</option>
+                </select>
+            </label></br>
+
+        </fieldset>
+         <button type="button" id="botao_salvar" class="bot_salv">Salvar</button>
+    </form>
+
+    <script src="./controller/usuario.js"></script>
+    <script>
+
+ 
+         function mostarSenha(){
+           const oio = document.querySelector('.olin');
+           const sen =document.getElementById('senha');
+           const fah=document.getElementById('fih');
+               if(sen.type==="password"){
+                   sen.type="text"
+                   fah.classList.remove('fa-eye'); 
+                   fah.classList.add('fa-eye-slash');
+                }
+            else{
+                sen.type="password";
+                fah.classList.remove('fa-eye-slash');
+                fah.classList.add('fa-eye')
+            } 
+        };
+    </script>
+</body>
+</html>

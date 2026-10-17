@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <div id="log">
+       <h1>Faça seu login</h1>
+       <label for="login">Usuario(email)</br><input id="login" type="text"></label></br>
+       <label for="senha">Senha</br><input id="senha" type="password">
+          <span class="olin" onclick="mostarSenha()">
+             <i id="fih" class="fa-solid fa-eye"></i>
+          </span>
+       </label></br>
+       </br> <button id="salv">Salvar</button>
+       <a href="altera_senha_email.html" title="Editar" class="btn-link">Esqueci minha senha</a>
+   </div>
+   <script>
+        function mostarSenha(){
+           const oio = document.querySelector('.olin');
+           const sen =document.getElementById('senha');
+           const fah=document.getElementById('fih');
+               if(sen.type==="password"){
+                   sen.type="text"
+                   fah.classList.remove('fa-eye'); 
+                   fah.classList.add('fa-eye-slash');
+                }
+            else{
+                sen.type="password";
+                fah.classList.remove('fa-eye-slash');
+                fah.classList.add('fa-eye')
+            } 
+        };
+   </script> 
+   <script src="./controller/usuario.js"></script>
+   <style>
+     body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centraliza na horizontal */
+  align-items: center;     /* centraliza na vertical */
+  background-color: #222;  /* só para destacar */
+}
+
+#log {
+  background-color: black;
+  border-radius: 0.3rem;
+  width: 20rem;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+#cadrastu{
+    position:absolute;
+    top:423px;
+    left:46em;
+}
+#atualizar{
+    position:absolute;
+    top:403px;
+    left:46em;
+}
+   </style>
+</body>
+</html>

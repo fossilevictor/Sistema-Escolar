@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil 2</title>
+    <link rel="stylesheet" href="paraencia.css">
+</head>
+<body>
+    <aside class = "plug">
+        <img id = "xereq"src = "gato mao.jpg" alt = "Gatinho fofinho">
+        <h1>Meu Perfil Profissional</h1>
+        <img id = "negi"src = "fofo.jpg" alt = "Gatinho fofinho">
+        <nav aria-label="Menu-Principal">
+            <ul>
+                <li><a class = "links" href = "# apresentacao">Apresentação</a></li>
+                <li><a class = "links" href = "# dados-pessoais">Dados pessoais</a></li>
+                <li><a class = "links" href = "# experiencia-profissional">Experiencia profissional</a></li>
+                <li><a class = "links" href = "# formação-profissional">Formação profissional</a></li>
+            </ul>
+        </nav>       
+    </aside>
+    <h1 class = "pronas" id = "vido">Bem-vindo</h1>
+    <p class = "pronas" id = "opcao">Selecione uma opçao no menu lateral para começar</p>
+      
+        <section>
+            
+            <form action = "#" method = "post">
+                
+                <fieldset id = "dados-pessoais">
+                    <legend>Dados pessoais</legend>
+                    <label for = "nome">Nome:</br><input id = "nome" name = "nome" type = "nome"></label></br>
+                    <label for  = "email">Email:</br><input id = "email" name = "email" type = "email"></label></br>
+                    <label for = "telefone">Telefone:</br><input id = "telefone" name = "telefone" placeholder="(DDD) 99999-9999" type = "tel"></label></br>
+                    <label for = "nascimento">Data de nascimento:</br><input id = "nascimento" name = "nascimento" type= "date"></label></br>
+                    <button type = "submit">Salvar dados</button>
+                </fieldset>
+                <fieldset id = "experiencia-profissional">
+                    <legend>Experiencia Profissional</legend>
+                    <label for = "cargo">Cargo/Posição:</br><input id = "cargo" name ="cargo" type = "cargo"></label></br>
+                    <label for = "empresa">Empresa:</br><input id = "empresa" name = "empresa" type = "empresa"></label></br>
+                    <label for = "entrada">Entrada:</br><input id = "entrada" name = "entrada" type = "date"></label></br>
+                    <label for = "saida">Saída:</br><input id = "saida" name = "saida" type = "date"></label></br>
+                    <label for = "atividades">Descrição de atvividades e responsabilidades:</br><input id = "atividades" name ="atividades" type = "atividades"></label></br>
+                    <label for = "tacnologias">Tecnologias e ferramentas utilizadas:</br><input id = "tecnologias" name = "tecnologias" type ="tecnologias"></label></br>
+                     <button type = "submit">Salvar experiencia</button>
+                </fieldset>
+                <fieldset id = "formação-profissional">
+                    <legend>Formação academica</legend>
+                    <label for = "formação">Nível de formação:</br>
+                      <select id = "formação" name = "formação">
+                            <option value ="">Selecione</option>
+                            <option value ="fundamental completo">Fundamental completo</option>
+                            <option value ="fundamental incompleto">Fundamental incompleto</option>
+                            <option value ="ensino medio completo">Ensino Médio completo</option>
+                            <option value ="ensino medio incompleto">Ensino Médio incompleto</option>
+                            <option value ="ensino superior">Ensino Superior</option>
+                      </select>
+                    </label></br>
+                    <label for = "nome-curso">Nome do Curso:</br><input id = "nome-curso" name = "nome-curso" type = "nome-curso"></label></br>
+                    <label for = "instituicao">Instituição de ensino:</br><input id = "instituicao" name = "instituicao" type = "instituicao"></label></br>
+                    <label for = "status">status</br>
+                        <select id = "status" name = "status">
+                            <option value ="">Selecione</option>
+                            <option value ="andamento">Em andamento</option>
+                            <option value ="completo">completo</option>
+                        </select>
+                    </label></br>
+                    <label for = "data inicio">Início
+                        <input type = "date" >
+                    </label></br>
+                    <label for = "data fim">Fim
+                        <input type = "date" >
+                    </label></br>
+                       <button type = "submit">Salvar formação</button>
+                </fieldset>
+          
+            </form>
+        
+        </section> 
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const secoes = document.querySelectorAll("fieldset");
+            
+              // Esconde todas as seções
+              function esconderTudo() {
+                secoes.forEach(sec => sec.style.display = "none");
+              }
+            
+              // Mostra uma seção pelo id
+              function mostrar(id) {
+                esconderTudo();
+                const alvo = document.getElementById(id);
+                if (alvo) alvo.style.display = "block";
+              }
+            
+              // Liga os cliques do menu
+              document.querySelectorAll('nav[aria-label="Menu-Principal"] a').forEach(link => {
+                link.addEventListener("click", e => {
+                  e.preventDefault();
+                  const id = link.getAttribute("href").replace("#", "").trim();
+                  mostrar(id);
+                });
+              });
+            
+              // Inicia mostrando só a primeira seção
+              esconderTudo();
+              mostrar("apresentacao");
+            });
+            </script>
+            
+             
+</body>
+</html>

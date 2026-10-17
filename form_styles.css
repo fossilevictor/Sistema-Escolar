@@ -1,0 +1,57 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10%; 
+  
+}
+#apresen{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color:white;
+    border: 10em;
+    border-left: 10px;
+    padding: 1em;
+    margin: 1em;
+    font-family:'Times New Roman', Times, serif;
+    font-size: x-large;
+    line-height: normal;
+    border-radius: 10px;
+    overflow: auto;
+    text-align: center;
+
+}
+#linda{
+    width: auto;
+    height: auto;
+    border: darkblue;
+    box-shadow: darkblue;
+    padding: 10em;
+    box-sizing: border-box;
+    position:absolute;
+    left: 8em;
+   
+}
+.abas-container{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    background-color: white;
+    padding: 100px;
+    border-radius: 100%;
+    box-shadow: darkblue;
+}
+
+legend{
+    font-size: 24px;
+    font-weight: 100;
+    padding: 1em;
+}
+
+label,legend{
+    color:white;
+}
+#cazul{
+    position: absolute;
+    right: 5%;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+     <form>
+    <input type="hidden" id="curso_id">
+        <fieldset>
+            <legend>Pesquisa</legend>
+            <button id="cazul"> <a href="cadastro_curso.html" id="2" title="professor" target="iframe-conteudo">Novo curso</a></button>
+            <label for="nome">Nome:</br><input id="nome" name="nome" type="text"></label></br>
+        </fieldset>
+        <button id="procurar" type="button">Procurar</button>
+        <fieldset>
+            <legend>Registros</legend>
+            <div id="resultado" style="margin-top: 20px;"></div>
+       </fieldset>
+   </form> 
+    </form>
+    <script src="./controller/curso.js"></script>
+</body>
+</html>

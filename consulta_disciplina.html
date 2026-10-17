@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciplina</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+    <form action="" method="GET" method="POST">
+       <fieldset>
+           <button id="cazul"><a href="cadastro_disciplina.html" id="xoxo" title="disciplina" target="iframe-conteudo">Nova Disciplina</a></button>
+           <legend>Pesquisa</legend>
+           <label for="filtroNome">Nome:</br><input id="filtroNome" name="filtroNome" type="text"></label></br>
+          </br>
+        
+       </fieldset>
+       <button id="procurar" type="button" >Procurar</button>
+
+       <fieldset>
+            <legend>Registros</legend>
+            <div id="resultado" style="margin-top: 20px;"></div>
+       </fieldset>
+   </form> 
+   <script src="./controller/disciplina.js"></script>
+    
+</body>
+</html>
